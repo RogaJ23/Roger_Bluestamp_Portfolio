@@ -52,6 +52,21 @@ For your first milestone, describe what your project is and how you plan to buil
 - Technical progress you've made so far
 - Challenges you're facing and solving in your future milestones
 - What your plan is to complete your project
+  
+# Starter Project
+
+The Starter Project that I created was the retro arcade game.  It is composed of a microcontroller, LED dot matrix screens, digital tube, keyboard, buzzer, and power supply circuit.  The process was to solder all of the parts onto the PCB, and then also to connect a battery holder to the PCB for the game to work.  
+Process:
+1. First solder all the buttons to the PCB(6)
+2. Solder the 5 joints of the micro USB
+3. Solder the 220uF electrolytic capacitor.(Long pin into +, short pin into -)
+4. Solder the self-lock switch
+5. Solder the buzzer, 2 dot matrix modules, and digital display tube
+6. Test the game kit using the micro USB
+7. Install the battery case on the back of the shell
+8. Use bolts to stabilize and connect the shells
+9. Finally, installed button caps and shell to the PCB, to protect the kit and make it nice to hold
+Some difficulties that I encountered were during soldering because the parts were so closely compacted. Using a multimeter, I determined the parts that were wrongly connected and used both a desoldering pump and desoldering wire to remove overlapping metal.  With these changes and also connecting a battery holder to the PCB, I was finally able to make it work and encased it in a protective shell.
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
