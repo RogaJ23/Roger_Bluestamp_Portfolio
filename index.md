@@ -55,7 +55,9 @@ For your first milestone, describe what your project is and how you plan to buil
 - What your plan is to complete your project
   
 # Starter Project
+
 <iframe width="853" height="480" src="https://www.youtube.com/embed/FUIzb9q6gWU" title="Roger J.  Starter Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The Starter Project that I created was the retro arcade game.  It is composed of a microcontroller, LED dot matrix screens, digital tube, keyboard, buzzer, and power supply circuit.  The process was to solder all of the parts onto the PCB, and then also to connect a battery holder to the PCB for the game to work.  
 Process:
 1. First solder all the buttons to the PCB(6)
@@ -67,6 +69,7 @@ Process:
 7. Install the battery case on the back of the shell
 8. Use bolts to stabilize and connect the shells
 9. Finally, installed button caps and shell to the PCB, to protect the kit and make it nice to hold
+
 Some difficulties that I encountered were during soldering because the parts were so closely compacted. Using a multimeter, I determined the parts that were wrongly connected and used both a desoldering pump and desoldering wire to remove overlapping metal.  With these changes and also connecting a battery holder to the PCB, I was finally able to make it work and encased it in a protective shell.
 
 # Schematics 
