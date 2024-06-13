@@ -1,7 +1,7 @@
 # Bluestamp WALLE robot
-Cool robot that has emotions
-```Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails! :))
-```
+A simple emotional robot that can interact with the user.  With 2 8x8 LED eyes and servo-controlled eyebrows, this robot is great at conveying emotions and makes for an interesting project.  Some challenges, takeaways, and triumphs are...
+
+
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
 <!--- This is an HTML comment in Markdown -->
@@ -56,7 +56,7 @@ For your first milestone, describe what your project is and how you plan to buil
   
 # Starter Project
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/FUIzb9q6gWU" title="Roger J.  Starter Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FUIzb9q6gWU" title="Roger J.  Starter Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 The Starter Project that I created was the retro arcade game.  It is composed of a microcontroller, LED dot matrix screens, digital tube, keyboard, buzzer, and power supply circuit.  The process was to solder all of the parts onto the PCB, and then also to connect a battery holder to the PCB for the game to work.  
 Process:
