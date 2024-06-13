@@ -49,7 +49,7 @@ For your second milestone, explain what you've worked on since your previous mil
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For your first milestone, describe what your project is and how you plan to build it. You can include:
-For my first milestone, I wired all the parts to the breadboard and the Arduino Uno.  I also wrote some rough code to make sure all the parts worked.  I didn't have all the 
+For my first milestone, I wired all the parts to the breadboard and the Arduino Uno.  I connected the Servos, the LCD, the 8 by 8 LEDs via soldering, and connected the battery to the breadboard to power the servos, as the Arduino doesn't provide enough power to power all the servos.  I also wrote some rough code to make sure all the parts worked.  I got the servos to turn, the LEDs to light up with patterns, and the LCD to display text.  One challenge that I faced was that my LEDs did not match the schematic, so I had to research online to find out which pins they went in.  Another challenge was that the many wires that I had used made the circuit very messy and very difficult to navigate.
 - An explanation about the different components of your project and how they will all integrate together
 - Technical progress you've made so far
 - Challenges you're facing and solving in your future milestones
