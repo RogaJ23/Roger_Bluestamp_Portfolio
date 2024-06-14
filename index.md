@@ -15,7 +15,7 @@ You should comment out all portions of your portfolio that you have not complete
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
 ![Headstone Image](logo.svg)
-  <!---
+<!---
 # Final Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
@@ -49,29 +49,11 @@ For your second milestone, explain what you've worked on since your previous mil
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For your first milestone, describe what your project is and how you plan to build it. You can include:
-For my first milestone, I wired all the parts to the breadboard and the Arduino Uno.  I connected the Servos, the LCD, the 8 by 8 LEDs via soldering, and connected the battery to the breadboard to power the servos, as the Arduino doesn't provide enough power to power all the servos.  I also wrote some rough code to make sure all the parts worked.  I got the servos to turn, the LEDs to light up with patterns, and the LCD to display text.  One challenge that I faced was that my LEDs did not match the schematic, so I had to research online to find out which pins they went in.  Another challenge was that the many wires that I had used made the circuit very messy and very difficult to navigate.
+For my first milestone, I wired all the parts to the breadboard and the Arduino Uno.  I connected the Servos, the LCD, the 8 by 8 LEDs via soldering, and connected the battery to the breadboard to power the servos, as the Arduino doesn't provide enough power to power all the servos.  I also wrote some rough code to make sure all the parts worked.  I got the servos to turn, the LEDs to light up with patterns, and the LCD to display text.  One challenge that I faced was that my LEDs did not match the schematic, so I had to research online to find out which pins they went in.  Furthermore, I also had to look at the LedControl libraries and write my own code as my circuit was slightly different from the guide.  Another challenge was that the many wires that I had used made the circuit very messy and very difficult to navigate, however, I solved by using shorter wires whenever possible.  Eventually, the LED should be able to display patterns mimicking eyes, the LCD should be able to display text accordingly, the servos should allow the robot to turn its head, and finally, an ultrasonic sensor will be installed so the robot can gauge how close you are to it.  My next milestone would be to code everything so it can finally become like a robot.
 - An explanation about the different components of your project and how they will all integrate together
 - Technical progress you've made so far
 - Challenges you're facing and solving in your future milestones
 - What your plan is to complete your project -->
-  
-# Starter Project
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FUIzb9q6gWU" title="Roger J.  Starter Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-The Starter Project that I created was the retro arcade game.  It is composed of a microcontroller, LED dot matrix screens, digital tube, keyboard, buzzer, and power supply circuit.  The process was to solder all of the parts onto the PCB, and then also to connect a battery holder to the PCB for the game to work.  
-Process:
-1. First solder all the buttons to the PCB(6)
-2. Solder the 5 joints of the micro USB
-3. Solder the 220uF electrolytic capacitor.(Long pin into +, short pin into -)
-4. Solder the self-lock switch
-5. Solder the buzzer, 2 dot matrix modules, and digital display tube
-6. Test the game kit using the micro USB
-7. Install the battery case on the back of the shell
-8. Use bolts to stabilize and connect the shells
-9. Finally, installed button caps and shell to the PCB, to protect the kit and make it nice to hold
-
-Some difficulties that I encountered were during soldering because the parts were so closely compacted. Using a multimeter, I determined the parts that were wrongly connected and used both a desoldering pump and desoldering wire to remove overlapping metal.  With these changes and also connecting a battery holder to the PCB, I was finally able to make it work and encased it in a protective shell.
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
@@ -109,3 +91,21 @@ One of the best parts about Github is that you can view how other people set up 
 - [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
 
 To watch the BSE tutorial on how to create a portfolio, click here.
+
+# Starter Project
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FUIzb9q6gWU" title="Roger J.  Starter Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+The Starter Project that I created was the retro arcade game.  It is composed of a microcontroller, LED dot matrix screens, digital tube, keyboard, buzzer, and power supply circuit.  The process was to solder all of the parts onto the PCB, and then also to connect a battery holder to the PCB for the game to work.  
+Process:
+1. First solder all the buttons to the PCB(6)
+2. Solder the 5 joints of the micro USB
+3. Solder the 220uF electrolytic capacitor.(Long pin into +, short pin into -)
+4. Solder the self-lock switch
+5. Solder the buzzer, 2 dot matrix modules, and digital display tube
+6. Test the game kit using the micro USB
+7. Install the battery case on the back of the shell
+8. Use bolts to stabilize and connect the shells
+9. Finally, installed button caps and shell to the PCB, to protect the kit and make it nice to hold
+
+Some difficulties that I encountered were during soldering because the parts were so closely compacted. Using a multimeter, I determined the parts that were wrongly connected and used both a desoldering pump and desoldering wire to remove overlapping metal.  With these changes and also connecting a battery holder to the PCB, I was finally able to make it work and encased it in a protective shell.
