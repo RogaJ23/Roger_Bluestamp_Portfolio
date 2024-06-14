@@ -46,8 +46,9 @@ For your second milestone, explain what you've worked on since your previous mil
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/qGtCxEa6qno" title="Roger J.  First Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your first milestone, describe what your project is and how you plan to build it. You can include:
+
 For my first milestone, I wired all the parts to the breadboard and the Arduino Uno.  I connected the Servos, the LCD, the 8 by 8 LEDs via soldering, and connected the battery to the breadboard to power the servos, as the Arduino doesn't provide enough power to power all the servos.  I also wrote some rough code to make sure all the parts worked.  I got the servos to turn by connecting them to the battery and the Arduino, the LEDs to light up with patterns(instead of linking both together I just connected both of them separately to the Arduino using the digital pins), and the LCD to display text after importing a few libraries.  One challenge that I faced was that my LEDs did not match the schematic, so I had to research online to find out which pins they went in.  Furthermore, I also had to look at the LedControl libraries and write my own code as my circuit was slightly different from the guide.  Another challenge was that the many wires that I had used made the circuit very messy and very difficult to navigate, however, I solved by using shorter wires whenever possible.  Eventually, the LED should be able to display patterns mimicking eyes, the LCD should be able to display text accordingly, the servos should allow the robot to turn its head, and finally, an ultrasonic sensor will be installed so the robot can gauge how close you are to it.  My next milestone would be to code everything so it can finally become like a robot.
+
 <!---
 - An explanation about the different components of your project and how they will all integrate together
 - Technical progress you've made so far
