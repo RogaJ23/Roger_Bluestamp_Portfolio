@@ -81,6 +81,9 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Arduino Uno Micro Controller | What the item is used for | $27.60 | <a href="https://store-usa.arduino.cc/products/arduino-uno-rev3?selectedStore=us"> Link </a> |
 | 8x8 LED Matrix | Displays Patterns | $8.39 | <a href="https://www.amazon.com/HiLetgo-MAX7219-Matrix-Display-Control/dp/B07W6KZR5D/ref=sr_1_5?dib=eyJ2IjoiMSJ9.6txDTzXzJwL8zRVV3YtO1yrmajfw_y0CRyigoCFoMIf88gIXeooJOXb8vYGUPIq0ObonuTtZnzUEotuXGhGzon6_EBAz6eLEiSHXrQnBn1bpSF8szejjS2wPzlB_Aroc0BcPT6NmkuJIvRKPQyfU9aBSBU_OkM12iRvIUaR5i2HyxZtCrPSBX1vzREg-EEXIP5nszX4BSmPGHCafCqtopu99CJ6Td4UNGO7lZv-4peXGvjHPyu3Y28APtZjtCZPvynuY8HzGD7u7RWK7hqPFmP-GRyYzSpcaqaHQoV2xDUI.qPsKRkoPQyIxU-Ya7c2xrVnCVEO19NlNWIfv44fwAH4&dib_tag=se&keywords=8x8+LED+Matrix&qid=1718650968&sr=8-5"> Link </a> |
 | 16x2 LCD w/ I2C backpack | Display Text | $9.95 | <a href="https://www.adafruit.com/product/292"> Link </a> |
+| 2x Standard Sized Hobby Servos | What the item is used for | $27.60 | <a href="https://store-usa.arduino.cc/products/arduino-uno-rev3?selectedStore=us"> Link </a> |
+| Arduino Uno Micro Controller | What the item is used for | $27.60 | <a href="https://store-usa.arduino.cc/products/arduino-uno-rev3?selectedStore=us"> Link </a> |
+| Arduino Uno Micro Controller | What the item is used for | $27.60 | <a href="https://store-usa.arduino.cc/products/arduino-uno-rev3?selectedStore=us"> Link </a> |
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
