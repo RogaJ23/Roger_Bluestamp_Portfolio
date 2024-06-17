@@ -36,6 +36,8 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+Since my first milestone, I've worked on mostly the code for my WALLE robot.  I made the ultrasonic sensor work and linked it to the other parts of my project.  Now based on the distance from the ultrasonic sensor, the LED will display different emotions, the servos will turn accordingly, and the LCD also displays text accordingly.  One challenge that I faced was that when I first coded the project, the LED would flash repeatedly and be very inconsistent.  I fixed this problem by adding a delay for all the functions called so the ultrasonic sensors wouldn't go crazy.  My final step until finishing the project is just to get the 3D models and put the whole thing together.
+
 For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
 - Technical details of what you've accomplished and how they contribute to the final goal
 - What has been surprising about the project so far
