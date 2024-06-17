@@ -1,20 +1,20 @@
 # Bluestamp WALLE robot
 A simple emotional robot that can interact with the user.  With 2 8x8 LED eyes and servo-controlled eyebrows, this robot is great at conveying emotions and makes for an interesting project.  Some challenges, takeaways, and triumphs are...
 
-
+<!---
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
 <!--- This is an HTML comment in Markdown -->
 <!--- Anything between these symbols will not render on the published site -->
-```
+-->```
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Roger J | Valley Christian | Electrical Engineering | Incoming Junior
-
+<!---
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
-
 ![Headstone Image](logo.svg)
+-->
 <!---
 # Final Milestone
 
