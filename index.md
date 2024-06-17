@@ -52,23 +52,224 @@ For my first milestone, I wired all the parts to the breadboard and the Arduino 
 - Technical progress you've made so far
 - Challenges you're facing and solving in your future milestones
 - What your plan is to complete your project
--->
+
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+-->
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+
+#include <Servo.h>
+#include "LedControl.h"
+#include <binary.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+Servo pan;  
+Servo tilt;
+Servo leftBrow;
+Servo rightBrow;
+int DIN = 13;
+int CS = 12;
+int CLK = 11;
+// instance of LCD
+const int triggerPin = 7;
+const int echoPin = 8;
+float pulse_width, distance;
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+// instance if LED matrix
+LedControl lc=LedControl(13,11,12,1);
+LedControl lc2 = LedControl(10,2,9,1);
+void moveServos(int left, int right, int panIn, int tiltIn)
+{ 
+  leftBrow.write(left);
+  rightBrow.write(right);
+  pan.write(panIn);
+  tilt.write(tiltIn);
+}
+void happy(){
+  lc.setRow(0,0,B00000000);
+  lc.setRow(0,1,B00011100);
+  lc.setRow(0,2,B00100100);
+  lc.setRow(0,3,B01011100);
+  lc.setRow(0,4,B01011100);
+  lc.setRow(0,5,B00100100);
+  lc.setRow(0,6,B00011100);
+  lc.setRow(0,7,B00000000);
+  lc2.setRow(0,0,B00000000);
+  lc2.setRow(0,1,B00011100);
+  lc2.setRow(0,2,B00100100);
+  lc2.setRow(0,3,B01011100);
+  lc2.setRow(0,4,B01011100);
+  lc2.setRow(0,5,B00100100);
+  lc2.setRow(0,6,B00011100);
+  lc2.setRow(0,7,B00000000);
+}
+void angry(){
+  lc.setRow(0,0,B00000000);
+  lc.setRow(0,1,B01110000);
+  lc.setRow(0,2,B01111000);
+  lc.setRow(0,3,B01111100);
+  lc.setRow(0,4,B01111100);
+  lc.setRow(0,5,B00111110);
+  lc.setRow(0,6,B00001110);
+  lc.setRow(0,7,B00000000);
+  lc2.setRow(0,0,B00000000);
+  lc2.setRow(0,1,B00001110);
+  lc2.setRow(0,2,B00011110);
+  lc2.setRow(0,3,B00111110);
+  lc2.setRow(0,4,B00111110);
+  lc2.setRow(0,5,B01111100);
+  lc2.setRow(0,6,B01110000);
+  lc2.setRow(0,7,B00000000);
+}
+void nuetral(){
+  lc.setRow(0,0,B00000000);
+  lc.setRow(0,1,B00111100);
+  lc.setRow(0,2,B01000010);
+  lc.setRow(0,3,B01011010);
+  lc.setRow(0,4,B01011010);
+  lc.setRow(0,5,B01000010);
+  lc.setRow(0,6,B00111100);
+  lc.setRow(0,7,B00000000);
+  lc2.setRow(0,0,B00000000);
+  lc2.setRow(0,1,B00111100);
+  lc2.setRow(0,2,B01000010);
+  lc2.setRow(0,3,B01011010);
+  lc2.setRow(0,4,B01011010);
+  lc2.setRow(0,5,B01000010);
+  lc2.setRow(0,6,B00111100);
+  lc2.setRow(0,7,B00000000);
+}
+void suprised(){
+  lc.setRow(0,0,B01111110);
+  lc.setRow(0,1,B10000001);
+  lc.setRow(0,2,B10000001);
+  lc.setRow(0,3,B10011001);
+  lc.setRow(0,4,B10011001);
+  lc.setRow(0,5,B10000001);
+  lc.setRow(0,6,B10000001);
+  lc.setRow(0,7,B01111110);
+  lc2.setRow(0,0,B01111110);
+  lc2.setRow(0,1,B10000001);
+  lc2.setRow(0,2,B10000001);
+  lc2.setRow(0,3,B10011001);
+  lc2.setRow(0,4,B10011001);
+  lc2.setRow(0,5,B10000001);
+  lc2.setRow(0,6,B10000001);
+  lc2.setRow(0,7,B01111110);
+}
+void sad(){
+  lc.setRow(0,0,B00000000);
+  lc.setRow(0,1,B00111100);
+  lc.setRow(0,2,B01000010);
+  lc.setRow(0,3,B01011010);
+  lc.setRow(0,4,B00111010);
+  lc.setRow(0,5,B00010010);
+  lc.setRow(0,6,B00001100);
+  lc.setRow(0,7,B00000000);
+  lc2.setRow(0,0,B00000000);
+  lc2.setRow(0,1,B00001100);
+  lc2.setRow(0,2,B00010010);
+  lc2.setRow(0,3,B00111010);
+  lc2.setRow(0,4,B01011010);
+  lc2.setRow(0,5,B01000010);
+  lc2.setRow(0,6,B00111100);
+  lc2.setRow(0,7,B00000000);
+}
+void love(){
+  lc.setRow(0,0,B01111000);
+  lc.setRow(0,1,B10000100);
+  lc.setRow(0,2,B10000010);
+  lc.setRow(0,3,B01011001);
+  lc.setRow(0,4,B01011001);
+  lc.setRow(0,5,B10000010);
+  lc.setRow(0,6,B10000100);
+  lc.setRow(0,7,B01111000);
+  lc2.setRow(0,0,B01111000);
+  lc2.setRow(0,1,B10000100);
+  lc2.setRow(0,2,B10000010);
+  lc2.setRow(0,3,B01011001);
+  lc2.setRow(0,4,B01011001);
+  lc2.setRow(0,5,B10000010);
+  lc2.setRow(0,6,B10000100);
+  lc2.setRow(0,7,B01111000);
+}
+void setup(){
+  //lcd stuff
+  lcd.init();
+  lcd.backlight();
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Wassusp guys:)");
+  //wake up the MAX72XX from power-saving mode
+  lc.shutdown(0,false);
+  lc2.shutdown(0, false);
+  //set a medium brightness for the Leds
+  lc.setIntensity(0,8);
+  lc2.setIntensity(0,8);
+  //attack servos here
+  //servo1.attach(4);
+  leftBrow.attach(3);
+  rightBrow.attach(4);
+  pan.attach(5);
+  tilt.attach(6);
+  //ultrasonic sensor
+  pinMode(triggerPin, OUTPUT);  
+	pinMode(echoPin, INPUT);  
+	Serial.begin(9600);  
+
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-
+void loop(){
+  digitalWrite(triggerPin, LOW);  
+	delayMicroseconds(2);  
+	digitalWrite(triggerPin, HIGH);  
+	delayMicroseconds(10);  
+	digitalWrite(triggerPin, LOW); 
+  // get and calculate distance
+  pulse_width = pulseIn(echoPin, HIGH);
+  distance = (pulse_width*0.0343)/2;
+  if(distance <= 10.0)
+    {
+      delay(500);
+      lcd.clear();
+      angry();
+      lcd.print("Get back!");
+      moveServos(45, 135, 150, 100);
+    }else if(distance <= 20 && distance > 10){
+      delay(500);
+      lcd.clear();
+      suprised();
+      lcd.print("Why u so close?");
+      moveServos(100, 80, 170, 45);
+    }else if(distance <= 30 && distance > 20){
+      delay(500);
+      lcd.clear();
+      love();
+      lcd.print("I love you <3");
+      moveServos(115, 65, 170, 30);
+    }else if(distance <= 40 && distance > 30){
+      delay(500);
+      lcd.clear();
+      happy();
+      lcd.print("I'm so happyyy!!!");
+      moveServos(120, 60, 180, 60);
+    }else if(distance <= 50 && distance > 40){
+      delay(500);
+      lcd.clear();
+      sad();
+      lcd.print("Do you hate me?? ;(");
+      moveServos(30, 150, 135, 120);
+    }else{
+      delay(500);
+      lcd.clear();
+      nuetral();
+      lcd.print("I'm bored");
+      moveServos(90, 90, 180, 90);
+    }
 }
 ```
 
