@@ -24,13 +24,13 @@ For your final milestone, explain the outcome of your project. Key details to in
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
 
-
+-->
 
 # Second Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/tUSRgNjJTZM" title="Roger J. Second Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Since my first milestone, I've worked on mostly the code for my WALLE robot.  I wrote code for the ultrasonic sensor work to calcuate distance and linked it to the other parts of my project.  I also coded all the other parts of my project, such as the LED displays, made functions for the sensors, and also made the LCD different text accordingly.  Now based on the distance from the ultrasonic sensor, the LED will display different emotions, the servos will turn accordingly, and the LCD will also display text accordingly.  One challenge that I faced was that when I first coded the project, the LED would flash repeatedly and be very inconsistent.  The reason for this is that the ultrasonic sensors send out waves and measure the time for them to bounce back in order to find the distance, but there are some moments where the sensor isn't detecting anything as the waves are bouncing back, causing everything to flash.  I fixed this problem by adding a delay for all the functions so the ultrasonic sensors wouldn't go crazy.  My final step until finishing the project is just to get the 3D models and put the whole thing together.
 
@@ -39,7 +39,7 @@ For your second milestone, explain what you've worked on since your previous mil
 - What has been surprising about the project so far
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
--->
+
 # First Milestone
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/qGtCxEa6qno" title="Roger J.  First Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
