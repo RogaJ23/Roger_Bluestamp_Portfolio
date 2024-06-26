@@ -1,4 +1,4 @@
-# Bluestamp WALLE robot
+ t# Bluestamp WALLE robot
 A simple emotional robot that can interact with the user.  With 2 8x8 LED eyes and servo-controlled eyebrows, this robot is great at conveying emotions and makes for an interesting project.  Some challenges, takeaways, and triumphs are...
 
 <!---
@@ -56,14 +56,17 @@ For your second milestone, explain what you've worked on since your previous mil
 For my first milestone, I wired all the parts to the breadboard and the Arduino Uno.  I connected the Servos, the LCD, the 8 by 8 LEDs via soldering, and connected the battery to the breadboard to power the servos, as the Arduino doesn't provide enough power to power all the servos.  I also wrote some rough code to make sure all the parts worked.  I got the servos to turn by connecting them to the battery and the Arduino, the LEDs to light up with patterns(instead of linking both together I just connected both of them separately to the Arduino using the digital pins), and the LCD to display text after importing a few libraries.  One challenge that I faced was that my LEDs did not match the schematic, so I had to research online to find out which pins they went in.  Furthermore, I also had to look at the LedControl libraries and write my own code as my circuit was slightly different from the guide.  Another challenge was that the many wires that I had used made the circuit very messy and very difficult to navigate, however, I solved by using shorter wires whenever possible.  Eventually, the LED should be able to display patterns mimicking eyes, the LCD should be able to display text accordingly, the servos should allow the robot to turn its head, and finally, an ultrasonic sensor will be installed so the robot can gauge how close you are to it.  My next milestone would be to code everything so it can finally become like a robot.
 
 <!---
+
 - An explanation about the different components of your project and how they will all integrate together
 - Technical progress you've made so far
 - Challenges you're facing and solving in your future milestones
 - What your plan is to complete your project
 
-# Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 -->
+
+# Schematics 
+https://content.instructables.com/FKB/6RR2/I941AJNR/FKB6RR2I941AJNR.png?auto=webp&frame=1&width=1024&height=1024&fit=bounds&md=53516c7e3a5ca107ee7f1a6795817b39 
+
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
