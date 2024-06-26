@@ -1,4 +1,4 @@
- t# Bluestamp WALLE robot
+Bluestamp WALLE robot
 A simple emotional robot that can interact with the user.  With 2 8x8 LED eyes and servo-controlled eyebrows, this robot is great at conveying emotions and makes for an interesting project.  Some challenges, takeaways, and triumphs are...
 
 <!---
