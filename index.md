@@ -62,7 +62,7 @@ For my first milestone, I wired all the parts to the breadboard and the Arduino 
 
 # Schematics 
 https://content.instructables.com/FKB/6RR2/I941AJNR/FKB6RR2I941AJNR.png?auto=webp&frame=1&width=1024&height=1024&fit=bounds&md=53516c7e3a5ca107ee7f1a6795817b39 
-
+![Book logo](idk.webp)
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
