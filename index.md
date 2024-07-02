@@ -383,6 +383,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 | 2x Standard Sized Hobby Servos | Tilt and Pan Servos | $39.90 | <a href="https://www.ebay.com/itm/266337741668"> Link </a> |
 | Pan Tilt Servo Brackets | Turning the head of the robot | $12.99 | <a href="https://www.amazon.com/Servo-Mount-Bracket-MG996R-Steering/dp/B07PQ12TXS/ref=asc_df_B07PQ12TXS/?tag=hyprod-20&linkCode=df0&hvadid=693521150576&hvpos=&hvnetw=g&hvrand=14460099996128964079&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032183&hvtargid=pla-737353487171&psc=1&mcid=18db4ecd9599397a9762cbde216cdeb8&gad_source=1"> Link </a> |
 | Ultrasonic Sensor | Detecting Distance | $6.99 | <a href="https://www.amazon.com/Ultrasonic-Distance-Mounting-Compatible-Mega2560/dp/B0C5JJV53K/ref=asc_df_B0C5JJV53K/?tag=hyprod-20&linkCode=df0&hvadid=693071814664&hvpos=&hvnetw=g&hvrand=5777755611181277781&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032183&hvtargid=pla-2267103414704&psc=1&mcid=bf0e13bb07ff3732a3ff8ba6f7496c41&gad_source=1"> Link </a> |
+| 2x SG90 9G Micro Servos | Eyebrows of the robot | $7.29 | <a href="https://www.amazon.com/Sipytoph-Helicopter-Airplane-Walking-Control/dp/B09185SC1W"> Link </a> |
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
