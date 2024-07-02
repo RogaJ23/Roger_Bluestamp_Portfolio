@@ -70,175 +70,255 @@ Here's where you'll put your code. The syntax below places it into a block of co
 
 #include <Servo.h>
 #include "LedControl.h"
-#include <binary.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
+#include <SoftwareSerial.h>
+
+//sensor stuff
+float pulse_width, distance;
+
+// Initialize Bluetooth
+SoftwareSerial HM10(0, 1);
+char appData;  
+String inData = "";
+
+// Initialize servos
 Servo pan;  
 Servo tilt;
 Servo leftBrow;
 Servo rightBrow;
+
+// Define pins for LED matrix
 int DIN = 13;
 int CS = 12;
 int CLK = 11;
-// instance of LCD
+
+// Define pins for ultrasonic sensor
 const int triggerPin = 7;
 const int echoPin = 8;
-float pulse_width, distance;
+
+// Initialize LCD
 LiquidCrystal_I2C lcd(0x27, 16, 2);
-// instance if LED matrix
-LedControl lc=LedControl(13,11,12,1);
-LedControl lc2 = LedControl(10,2,9,1);
-void moveServos(int left, int right, int panIn, int tiltIn)
-{ 
-  leftBrow.write(left);
-  rightBrow.write(right);
-  pan.write(panIn);
-  tilt.write(tiltIn);
+
+// Initialize LED matrix
+LedControl lc2 = LedControl(13, 11, 12, 1);
+LedControl lc = LedControl(2, 10, 9, 1);
+
+void happy() {
+  // Define happy face pattern
+  lc.setRow(0, 0, B00000000);
+  lc.setRow(0, 1, B00011100);
+  lc.setRow(0, 2, B00100100);
+  lc.setRow(0, 3, B01011100);
+  lc.setRow(0, 4, B01011100);
+  lc.setRow(0, 5, B00100100);
+  lc.setRow(0, 6, B00011100);
+  lc.setRow(0, 7, B00000000);
+  lc2.setRow(0, 0, B00000000);
+  lc2.setRow(0, 1, B00011100);
+  lc2.setRow(0, 2, B00100100);
+  lc2.setRow(0, 3, B01011100);
+  lc2.setRow(0, 4, B01011100);
+  lc2.setRow(0, 5, B00100100);
+  lc2.setRow(0, 6, B00011100);
+  lc2.setRow(0, 7, B00000000);
 }
-void happy(){
-  lc.setRow(0,0,B00000000);
-  lc.setRow(0,1,B00011100);
-  lc.setRow(0,2,B00100100);
-  lc.setRow(0,3,B01011100);
-  lc.setRow(0,4,B01011100);
-  lc.setRow(0,5,B00100100);
-  lc.setRow(0,6,B00011100);
-  lc.setRow(0,7,B00000000);
-  lc2.setRow(0,0,B00000000);
-  lc2.setRow(0,1,B00011100);
-  lc2.setRow(0,2,B00100100);
-  lc2.setRow(0,3,B01011100);
-  lc2.setRow(0,4,B01011100);
-  lc2.setRow(0,5,B00100100);
-  lc2.setRow(0,6,B00011100);
-  lc2.setRow(0,7,B00000000);
+
+void angry() {
+  // Define angry face pattern
+  lc.setRow(0, 0, B00000000);
+  lc.setRow(0, 1, B01110000);
+  lc.setRow(0, 2, B01111000);
+  lc.setRow(0, 3, B01111100);
+  lc.setRow(0, 4, B01111100);
+  lc.setRow(0, 5, B00111110);
+  lc.setRow(0, 6, B00001110);
+  lc.setRow(0, 7, B00000000);
+  lc2.setRow(0, 0, B00000000);
+  lc2.setRow(0, 1, B00001110);
+  lc2.setRow(0, 2, B00011110);
+  lc2.setRow(0, 3, B00111110);
+  lc2.setRow(0, 4, B00111110);
+  lc2.setRow(0, 5, B01111100);
+  lc2.setRow(0, 6, B01110000);
+  lc2.setRow(0, 7, B00000000);
 }
-void angry(){
-  lc.setRow(0,0,B00000000);
-  lc.setRow(0,1,B01110000);
-  lc.setRow(0,2,B01111000);
-  lc.setRow(0,3,B01111100);
-  lc.setRow(0,4,B01111100);
-  lc.setRow(0,5,B00111110);
-  lc.setRow(0,6,B00001110);
-  lc.setRow(0,7,B00000000);
-  lc2.setRow(0,0,B00000000);
-  lc2.setRow(0,1,B00001110);
-  lc2.setRow(0,2,B00011110);
-  lc2.setRow(0,3,B00111110);
-  lc2.setRow(0,4,B00111110);
-  lc2.setRow(0,5,B01111100);
-  lc2.setRow(0,6,B01110000);
-  lc2.setRow(0,7,B00000000);
+
+void neutral() { // Corrected function name
+  // Define neutral face pattern
+  lc.setRow(0, 0, B00000000);
+  lc.setRow(0, 1, B00111100);
+  lc.setRow(0, 2, B01000010);
+  lc.setRow(0, 3, B01011010);
+  lc.setRow(0, 4, B01011010);
+  lc.setRow(0, 5, B01000010);
+  lc.setRow(0, 6, B00111100);
+  lc.setRow(0, 7, B00000000);
+  lc2.setRow(0, 0, B00000000);
+  lc2.setRow(0, 1, B00111100);
+  lc2.setRow(0, 2, B01000010);
+  lc2.setRow(0, 3, B01011010);
+  lc2.setRow(0, 4, B01011010);
+  lc2.setRow(0, 5, B01000010);
+  lc2.setRow(0, 6, B00111100);
+  lc2.setRow(0, 7, B00000000);
 }
-void nuetral(){
-  lc.setRow(0,0,B00000000);
-  lc.setRow(0,1,B00111100);
-  lc.setRow(0,2,B01000010);
-  lc.setRow(0,3,B01011010);
-  lc.setRow(0,4,B01011010);
-  lc.setRow(0,5,B01000010);
-  lc.setRow(0,6,B00111100);
-  lc.setRow(0,7,B00000000);
-  lc2.setRow(0,0,B00000000);
-  lc2.setRow(0,1,B00111100);
-  lc2.setRow(0,2,B01000010);
-  lc2.setRow(0,3,B01011010);
-  lc2.setRow(0,4,B01011010);
-  lc2.setRow(0,5,B01000010);
-  lc2.setRow(0,6,B00111100);
-  lc2.setRow(0,7,B00000000);
+
+void surprised() {
+  // Define surprised face pattern
+  lc.setRow(0, 0, B01111110);
+  lc.setRow(0, 1, B10000001);
+  lc.setRow(0, 2, B10000001);
+  lc.setRow(0, 3, B10011001);
+  lc.setRow(0, 4, B10011001);
+  lc.setRow(0, 5, B10000001);
+  lc.setRow(0, 6, B10000001);
+  lc.setRow(0, 7, B01111110);
+  lc2.setRow(0, 0, B01111110);
+  lc2.setRow(0, 1, B10000001);
+  lc2.setRow(0, 2, B10000001);
+  lc2.setRow(0, 3, B10011001);
+  lc2.setRow(0, 4, B10011001);
+  lc2.setRow(0, 5, B10000001);
+  lc2.setRow(0, 6, B10000001);
+  lc2.setRow(0, 7, B01111110);
 }
-void suprised(){
-  lc.setRow(0,0,B01111110);
-  lc.setRow(0,1,B10000001);
-  lc.setRow(0,2,B10000001);
-  lc.setRow(0,3,B10011001);
-  lc.setRow(0,4,B10011001);
-  lc.setRow(0,5,B10000001);
-  lc.setRow(0,6,B10000001);
-  lc.setRow(0,7,B01111110);
-  lc2.setRow(0,0,B01111110);
-  lc2.setRow(0,1,B10000001);
-  lc2.setRow(0,2,B10000001);
-  lc2.setRow(0,3,B10011001);
-  lc2.setRow(0,4,B10011001);
-  lc2.setRow(0,5,B10000001);
-  lc2.setRow(0,6,B10000001);
-  lc2.setRow(0,7,B01111110);
+
+void sad() {
+  // Define sad face pattern
+  lc.setRow(0, 0, B00000000);
+  lc.setRow(0, 1, B00111100);
+  lc.setRow(0, 2, B01000010);
+  lc.setRow(0, 3, B01011010);
+  lc.setRow(0, 4, B00111010);
+  lc.setRow(0, 5, B00010010);
+  lc.setRow(0, 6, B00001100);
+  lc.setRow(0, 7, B00000000);
+  lc2.setRow(0, 0, B00000000);
+  lc2.setRow(0, 1, B00001100);
+  lc2.setRow(0, 2, B00010010);
+  lc2.setRow(0, 3, B00111010);
+  lc2.setRow(0, 4, B01011010);
+  lc2.setRow(0, 5, B01000010);
+  lc2.setRow(0, 6, B00111100);
+  lc2.setRow(0, 7, B00000000);
 }
-void sad(){
-  lc.setRow(0,0,B00000000);
-  lc.setRow(0,1,B00111100);
-  lc.setRow(0,2,B01000010);
-  lc.setRow(0,3,B01011010);
-  lc.setRow(0,4,B00111010);
-  lc.setRow(0,5,B00010010);
-  lc.setRow(0,6,B00001100);
-  lc.setRow(0,7,B00000000);
-  lc2.setRow(0,0,B00000000);
-  lc2.setRow(0,1,B00001100);
-  lc2.setRow(0,2,B00010010);
-  lc2.setRow(0,3,B00111010);
-  lc2.setRow(0,4,B01011010);
-  lc2.setRow(0,5,B01000010);
-  lc2.setRow(0,6,B00111100);
-  lc2.setRow(0,7,B00000000);
+
+void love() {
+  // Define love face pattern
+  lc.setRow(0, 0, B01111000);
+  lc.setRow(0, 1, B10000100);
+  lc.setRow(0, 2, B10000010);
+  lc.setRow(0, 3, B01011001);
+  lc.setRow(0, 4, B01011001);
+  lc.setRow(0, 5, B10000010);
+  lc.setRow(0, 6, B10000100);
+  lc.setRow(0, 7, B01111000);
+  lc2.setRow(0, 0, B01111000);
+  lc2.setRow(0, 1, B10000100);
+  lc2.setRow(0, 2, B10000010);
+  lc2.setRow(0, 3, B01011001);
+  lc2.setRow(0, 4, B01011001);
+  lc2.setRow(0, 5, B10000010);
+  lc2.setRow(0, 6, B10000100);
+  lc2.setRow(0, 7, B01111000);
 }
-void love(){
-  lc.setRow(0,0,B01111000);
-  lc.setRow(0,1,B10000100);
-  lc.setRow(0,2,B10000010);
-  lc.setRow(0,3,B01011001);
-  lc.setRow(0,4,B01011001);
-  lc.setRow(0,5,B10000010);
-  lc.setRow(0,6,B10000100);
-  lc.setRow(0,7,B01111000);
-  lc2.setRow(0,0,B01111000);
-  lc2.setRow(0,1,B10000100);
-  lc2.setRow(0,2,B10000010);
-  lc2.setRow(0,3,B01011001);
-  lc2.setRow(0,4,B01011001);
-  lc2.setRow(0,5,B10000010);
-  lc2.setRow(0,6,B10000100);
-  lc2.setRow(0,7,B01111000);
-}
-void setup(){
-  //lcd stuff
+
+void setup() {
+  // Initialize serial communication
+  Serial.begin(9600);
+  HM10.begin(9600);
+
+  // Initialize LCD
   lcd.init();
   lcd.backlight();
   lcd.clear();
   lcd.setCursor(0, 0);
-  lcd.print("Wassusp guys:)");
-  //wake up the MAX72XX from power-saving mode
-  lc.shutdown(0,false);
+  lcd.print("Wassup guys:)");
+
+  // Wake up the MAX72XX from power-saving mode
+  lc.shutdown(0, false);
   lc2.shutdown(0, false);
-  //set a medium brightness for the Leds
-  lc.setIntensity(0,8);
-  lc2.setIntensity(0,8);
-  //attack servos here
-  //servo1.attach(4);
+
+  // Set a medium brightness for the LEDs
+  lc.setIntensity(0, 8);
+  lc2.setIntensity(0, 8);
+
+  // Attach servos
   leftBrow.attach(3);
   rightBrow.attach(4);
   pan.attach(5);
   tilt.attach(6);
-  //ultrasonic sensor
-  pinMode(triggerPin, OUTPUT);  
-	pinMode(echoPin, INPUT);  
-	Serial.begin(9600);  
 
+  // Initialize ultrasonic sensor
+  pinMode(triggerPin, OUTPUT);  
+  pinMode(echoPin, INPUT);  
 }
 
-void loop(){
+void loop() {
+  inData = "";
+  HM10.listen();
+  while (HM10.available() > 0) {
+    appData = HM10.read();
+    inData = String(appData);
+    Serial.write(appData);
+  }
+
+  if (Serial.available()) {
+    delay(10);
+    HM10.write(Serial.read());
+  }
+
+  // Send trigger pulse to ultrasonic sensor
   digitalWrite(triggerPin, LOW);  
-	delayMicroseconds(2);  
-	digitalWrite(triggerPin, HIGH);  
-	delayMicroseconds(10);  
-	digitalWrite(triggerPin, LOW); 
-  // get and calculate distance
-  pulse_width = pulseIn(echoPin, HIGH);
-  distance = (pulse_width*0.0343)/2;
-  if(distance <= 10.0)
+  delayMicroseconds(2);  
+  digitalWrite(triggerPin, HIGH);  
+  delayMicroseconds(10);  
+  digitalWrite(triggerPin, LOW); 
+
+  // Check for Bluetooth commands and update display and servos accordingly
+  if(inData != ""){
+    if (inData == "A") {
+      lcd.clear();
+      angry();
+      lcd.print("Get back!");
+      moveServos(50, 140, 150, 30);
+      delay(2000);
+    } else if (inData == "B") {
+      lcd.clear();
+      surprised();
+      lcd.print("Why u so close?");
+      moveServos(120, 60, 170, 40);
+      delay(2000);
+    } else if (inData == "C") {
+      lcd.clear();
+      love();
+      lcd.print("I love you <3");
+      delay(2000);
+      moveServos(115, 65, 150, 50);
+    } else if (inData == "D") {
+      lcd.clear();
+      happy();
+      lcd.print("I'm so happyyy!!!");
+      moveServos(120, 60, 180, 20);
+      delay(2000);
+    } else if (inData == "E") {
+      lcd.clear();
+      sad();
+      lcd.print("Do you hate me?? ;(");
+      moveServos(30, 150, 135, 100);
+      delay(2000);
+    } else if (inData == "F") {
+      lcd.clear();
+      neutral();
+      lcd.print("I'm bored");
+      moveServos(90, 90, 160, 80);
+      delay(2000);
+    }
+  }else{
+    pulse_width = pulseIn(echoPin, HIGH);
+    distance = (pulse_width*0.0343)/2;
+    if(distance <= 10.0)
     {
       delay(500);
       lcd.clear();
@@ -248,7 +328,7 @@ void loop(){
     }else if(distance <= 20 && distance > 10){
       delay(500);
       lcd.clear();
-      suprised();
+      surprised();
       lcd.print("Why u so close?");
       moveServos(100, 80, 170, 45);
     }else if(distance <= 30 && distance > 20){
@@ -272,11 +352,20 @@ void loop(){
     }else{
       delay(500);
       lcd.clear();
-      nuetral();
+      neutral();
       lcd.print("I'm bored");
       moveServos(90, 90, 180, 90);
     }
+  }
 }
+
+void moveServos(int left, int right, int panIn, int tiltIn) { 
+  leftBrow.write(left);
+  rightBrow.write(right);
+  pan.write(panIn);
+  tilt.write(tiltIn);
+}
+
 ```
 
 # Bill of Materials
@@ -294,9 +383,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
+- [Example 1](https://www.instructables.com/Emotionally-Responsive-Robot/)
 
 To watch the BSE tutorial on how to create a portfolio, click here.
 
