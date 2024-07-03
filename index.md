@@ -20,8 +20,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 # Modification one
 
-I added bluetooth module yahoo!
-For this modification, I added a bluetooth module to the arduino.
+I added bluetooth module yahoo!  For this modification, I added a bluetooth module to the arduino.  This allows the arduino to recieve bluetooth commands, so you can potentially control it with any device as long as it is connected.  The bluetooth model I used was the HM-10.
 
 # Final Milestone
 
