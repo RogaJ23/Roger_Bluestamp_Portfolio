@@ -21,6 +21,7 @@ You should comment out all portions of your portfolio that you have not complete
 # Modification one
 
 I added bluetooth module yahoo!
+For this modification, I added a bluetooth module to the arduino.
 
 # Final Milestone
 
