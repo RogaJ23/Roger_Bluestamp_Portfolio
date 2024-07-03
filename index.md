@@ -20,6 +20,8 @@ You should comment out all portions of your portfolio that you have not complete
 
 # Modification one
 
+<iframe width="853" height="480" src="https://www.youtube.com/embed/Ww3rcwW7eTk" title="Roger J. Modded Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 I added Bluetooth module yahoo!  For this modification, I added a Bluetooth module to the Arduino.  This allows the Arduino to receive Bluetooth commands, so you can potentially control it with any device as long as it is connected.  The Bluetooth model I used was the HM-10.
 I had to connect the Bluetooth module to the input pins, and a problem I faced doing this was that I couldn't actually upload code to the Arduino while the input pin was taken.  It took me a while to figure this out, but you could just unplug the input pin and upload the code, then plug it in back after.  I also had to edit my code to match the addition of the Bluetooth module.  At first, my code only worked separately, but eventually after some bugfixing, I made my code work with both the ultrasonic sensor and Bluetooth module.  Additionally, throughout the duration of working on this modification, I also made a few other changes to my project.  For example, I dremeled around the "eye sockets" of the robot and made the hole a bit bigger so the entirety of the LED could fit.  For my next mod, I want to add some Walle-like wheels so it can actually look like the Walle robot we see in Pixar movies.
 # Final Milestone
