@@ -1,5 +1,5 @@
 Bluestamp WALLE robot
-A simple emotional robot that can interact with the user.  With 2 8x8 LED eyes and servo-controlled eyebrows, this robot is great at conveying emotions and makes for an interesting project.  Using a 3D model and many electrical components, the robot can display emotion and move according to the distance you are from him.  Some challenges, takeaways, and triumphs are...
+A simple emotional robot that can interact with the user.  With 2 8x8 LED eyes and servo-controlled eyebrows, this robot is great at conveying emotions and makes for an interesting project.  Using a 3D model and many electrical components, the robot can display emotion and move according to the distance you are from him.  A lot of takeaways, as this was the first Arduino project where I used servos and an ultrasonic sensor, gave me a lot of insight in how these parts function and how to use them.
 
 <!---
 
