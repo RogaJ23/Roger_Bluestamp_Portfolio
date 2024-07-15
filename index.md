@@ -79,6 +79,7 @@ For my first milestone, I wired all the parts to the breadboard and the Arduino 
 
 # Schematics 
 ![Book logo](idk.webp)
+
 ![Schematic 2](Screen Shot 2024-07-15 at 11.21.33 AM.png)
 
 # Code
