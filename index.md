@@ -85,10 +85,11 @@ For my first milestone, I wired all the parts to the breadboard and the Arduino 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
-<div style="border:1px solid #ccc; padding: 10px; width: 100%; height: 400px; overflow: auto;">
-<pre>
-<code>
 
+<details>
+  <summary>Click to expand code</summary>
+
+```c++
 #include <Servo.h>
 #include "LedControl.h"
 #include <Wire.h>
@@ -386,10 +387,8 @@ void moveServos(int left, int right, int panIn, int tiltIn) {
   pan.write(panIn);
   tilt.write(tiltIn);
 }
-
-</code>
-</pre>
-</div>
+</details>
+```
 
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
