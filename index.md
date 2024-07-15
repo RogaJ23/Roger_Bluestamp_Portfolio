@@ -1,4 +1,5 @@
 Bluestamp WALLE robot
+
 A simple emotional robot that can interact with the user.  With 2 8x8 LED eyes and servo-controlled eyebrows, this robot is great at conveying emotions and makes for an interesting project.  Using a 3D model and many electrical components, the robot can display emotion and move according to the distance you are from him.  As for my modifications, I added a Bluetooth module and wheels, so I could control my robot remotely via phone.  A lot of takeaways, as this was the first Arduino project where I used servos and an ultrasonic sensor, gave me a lot of insight into how these parts function and how to use them.
 
 <!---
@@ -21,13 +22,7 @@ You should comment out all portions of your portfolio that you have not complete
 # Modification Two
 <iframe width="853" height="480" src="https://www.youtube.com/embed/HWWtUrr1HIA" title="Roger J. Second Modded Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For my second modification, I transformed my robot by attaching tank treads instead of regular wheels, making it resemble Wall-E from the Pixar movies. This addition required me to assemble the frame using various types of screws and standoffs to elevate the robot, preventing it from contacting the treads.
-
-After securing the Wall-E robot on the tank tread frame, I encountered a new challenge: the motor driver had no designated place and was awkwardly hanging around. To solve this, I drilled holes in the bottom of the robot to accommodate the motor driver and the standoffs.
-
-Another issue arose with the power supply. Initially, the Arduino was powered by my computer, but this setup limited the robot's mobility due to the short wire length. I resolved this by attaching a 9V battery to the Arduino, allowing it to operate independently of my computer.
-
-Additionally, I coded the Bluetooth module to include wheel turning functionality. The final result was a Wall-E robot capable of displaying different emotions using an ultrasonic sensor and Bluetooth, while also being able to move via Bluetooth control.
+For my second modification, I transformed my robot by attaching tank treads instead of regular wheels, making it resemble Wall-E from the Pixar movies. This addition required me to assemble the frame using various types of screws and standoffs to elevate the robot, preventing it from contacting the treads.  After securing the Wall-E robot on the tank tread frame, I encountered a new challenge: the motor driver had no designated place and was awkwardly hanging around. To solve this, I drilled holes in the bottom of the robot to accommodate the motor driver and the standoffs.  Another issue arose with the power supply. Initially, the Arduino was powered by my computer, but this setup limited the robot's mobility due to the short wire length. I resolved this by attaching a 9V battery to the Arduino, allowing it to operate independently of my computer.  Additionally, I coded the Bluetooth module to include wheel turning functionality. The final result was a Wall-E robot capable of displaying different emotions using an ultrasonic sensor and Bluetooth, while also being able to move via Bluetooth control.
 
 
 # Modification One
