@@ -382,9 +382,9 @@ void moveServos(int left, int right, int panIn, int tiltIn) {
   pan.write(panIn);
   tilt.write(tiltIn);
 }
-      
+
+```    
     </div>
-```
 
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
