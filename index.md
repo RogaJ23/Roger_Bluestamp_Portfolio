@@ -88,7 +88,6 @@ Here's where you'll put your code. The syntax below places it into a block of co
 
 <pre style="background#fdfdfd; border:none; height:40pc">
 
-```c++
 #include <Servo.h>
 #include "LedControl.h"
 #include <Wire.h>
@@ -386,7 +385,7 @@ void moveServos(int left, int right, int panIn, int tiltIn) {
   pan.write(panIn);
   tilt.write(tiltIn);
 }
-```
+      
     </pre>
 
 # Bill of Materials
