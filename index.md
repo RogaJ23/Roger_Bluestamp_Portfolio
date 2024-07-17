@@ -31,6 +31,7 @@ For my second modification, I transformed my robot by attaching tank treads inst
 
 I added Bluetooth module yahoo!  For this modification, I added a Bluetooth module to the Arduino.  This allows the Arduino to receive Bluetooth commands, so you can potentially control it with any device as long as it is connected.  The Bluetooth model I used was the HM-10.
 I had to connect the Bluetooth module to the input pins, and a problem I faced doing this was that I couldn't actually upload code to the Arduino while the input pin was taken.  It took me a while to figure this out, but you could just unplug the input pin and upload the code, then plug it in back after.  I also had to edit my code to match the addition of the Bluetooth module.  At first, my code only worked separately, but eventually after some bugfixing, I made my code work with both the ultrasonic sensor and Bluetooth module.  Additionally, throughout the duration of working on this modification, I also made a few other changes to my project.  For example, I dremeled around the "eye sockets" of the robot and made the hole a bit bigger so the entirety of the LED could fit.  For my next mod, I want to add some Walle-like wheels so it can actually look like the Walle robot we see in Pixar movies.
+
 # Final Milestone
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/z3CWq9U3frA" title="Roger J. Third Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -54,12 +55,6 @@ For your final milestone, explain the outcome of your project. Key details to in
 <iframe width="853" height="480" src="https://www.youtube.com/embed/tUSRgNjJTZM" title="Roger J. Second Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Since my first milestone, I've worked on mostly the code for my WALLE robot.  I wrote code for the ultrasonic sensor work to calcuate distance and linked it to the other parts of my project.  I also coded all the other parts of my project, such as the LED displays, made functions for the sensors, and also made the LCD different text accordingly.  Now based on the distance from the ultrasonic sensor, the LED will display different emotions, the servos will turn accordingly, and the LCD will also display text accordingly.  One challenge that I faced was that when I first coded the project, the LED would flash repeatedly and be very inconsistent.  The reason for this is that the ultrasonic sensors send out waves and measure the time for them to bounce back in order to find the distance, but there are some moments where the sensor isn't detecting anything as the waves are bouncing back, causing everything to flash.  I fixed this problem by adding a delay for all the functions so the ultrasonic sensors wouldn't go crazy.  My final step until finishing the project is just to get the 3D models and put the whole thing together.
-
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
 
 # First Milestone
 
