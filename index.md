@@ -20,6 +20,7 @@ You should comment out all portions of your portfolio that you have not complete
 -->
 
 # Modification Two
+
 <iframe width="853" height="480" src="https://www.youtube.com/embed/HWWtUrr1HIA" title="Roger J. Second Modded Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 For my second modification, I transformed my robot by attaching tank treads instead of regular wheels, making it resemble Wall-E from the Pixar movies. This addition required me to assemble the frame using various types of screws and standoffs to elevate the robot, preventing it from contacting the treads.  After securing the Wall-E robot on the tank tread frame, I encountered a new challenge: the motor driver had no designated place and was awkwardly hanging around. To solve this, I drilled holes in the bottom of the robot to accommodate the motor driver and the standoffs.  Another issue arose with the power supply. Initially, the Arduino was powered by my computer, but this setup limited the robot's mobility due to the short wire length. I resolved this by attaching a 9V battery to the Arduino, allowing it to operate independently of my computer.  Additionally, I coded the Bluetooth module to include wheel turning functionality. The final result was a Wall-E robot capable of displaying different emotions using an ultrasonic sensor and Bluetooth, while also being able to move via Bluetooth control.
@@ -49,8 +50,6 @@ For your final milestone, explain the outcome of your project. Key details to in
 -->
 
 # Second Milestone
-
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/tUSRgNjJTZM" title="Roger J. Second Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -402,10 +401,10 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Breadboard with 2 Power Rails | Base for connections | $19.99 | <a href="https://www.amazon.com/Solderless-Breadboard-Backplate-RSR-Electronics/dp/B00P2SO2XQ"> Link </a> |
 
 # Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://www.instructables.com/Emotionally-Responsive-Robot/)
 
-To watch the BSE tutorial on how to create a portfolio, click here.
+- [Example 1](https://www.instructables.com/Emotionally-Responsive-Robot/)
+- - [Example 2]([https://www.instructables.com/Emotionally-Responsive-Robot/)](https://circuitdigest.com/microcontroller-projects/how-to-use-arduino-and-hm-10-ble-module-to-control-led-with-android-app)
+
 
 # Starter Project
 
