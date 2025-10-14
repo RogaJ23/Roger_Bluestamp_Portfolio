@@ -10,7 +10,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Roger J | Valley Christian | Electrical Engineering | Incoming Junior
+| Roger J | Valley Christian | Computer Science | Incoming Junior
 
 
 ![Headstone Image](IMG_1370.jpg)
